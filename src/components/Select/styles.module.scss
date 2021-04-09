@@ -1,0 +1,15 @@
+.select {
+  width: 110px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ant-select-selection {
+  background-color: red;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  gap: 5px;
+}

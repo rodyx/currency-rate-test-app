@@ -1,0 +1,52 @@
+.hWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  h1 {
+    font-size: 1.5rem;
+    color: #75777e;
+    margin: 5px;
+  }
+}
+
+.rateWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .rateItem {
+    height: 50px;
+    width: 300px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #75777e;
+    box-shadow: -5px -5px 20px #fff,
+    5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+      box-shadow: -2px -2px 5px #fff,
+      2px 2px 5px #babecc;
+    }
+    
+  }
+}
+
+.select {
+  width: 110px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
