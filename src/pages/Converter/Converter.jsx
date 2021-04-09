@@ -34,12 +34,12 @@ export const Converter = () => {
         <div className={styles.resultWrapper}>
           <div className={styles.resultBlock}>
             <span className={styles.resultText}>Rate</span>
-            <div className={styles.resultValue}>{convertRate?.toFixed(2)}</div>
+            <div className={styles.resultValue}>{convertRate}</div>
           </div>
           
           <div className={styles.resultBlock}>
             <span className={styles.resultText}>Result</span>
-            <div className={styles.resultValue}>{convertResult?.toFixed(2)}</div>
+            <div className={styles.resultValue}>{convertResult}</div>
           </div>
         </div>
       </div>
