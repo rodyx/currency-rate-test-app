@@ -14,7 +14,6 @@ export async function convertCurrency(str) {
   let response = await fetch(`https://api.currencylayer.com/convert?access_key=791dd482f3ddfc2ce5389e9b95958cc1&from=${from}&to=${to}&amount=${amount}`)
   if (response.ok) {
     let resultObj = await response.json();
-    console.log(resultObj)
     return resultObj;
   } else return false
 }
