@@ -1,9 +1,12 @@
 import { Select } from 'antd';
 import styles from './styles.module.scss';
-import 'antd/dist/antd.css';
-import { options } from './selectData';
+import { flagArr } from './selectData';
+import { useStore } from 'effector-react';
+import { $baseCurrency } from '../../features/currency';
 
 export const SelectComponent = ({ setSelected }) => {
+  const baseCurrency = useStore($baseCurrency)
+
   const handleSelect = (option) => {
     console.log(option)
     setSelected(option);
@@ -11,10 +14,21 @@ export const SelectComponent = ({ setSelected }) => {
   
   return (
     <Select
-      defaultValue={localStorage.getItem('currency') || 'USD'}
+      defaultValue='USD'
+      value={baseCurrency}
       className={styles.select}
-      options={options}
       onSelect={handleSelect}
-    />
+    >
+      {flagArr.map((item) => (
+        <Select.Option
+          value={item.name}
+        >
+          <div className={styles.option}><img src={item.img} alt="flag" height="20px" width="20px" />{item.name}</div>
+        </Select.Option>
+      )
+        
+      )}
+    </Select>
   )
 }
+

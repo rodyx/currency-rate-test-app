@@ -1,7 +1,7 @@
 import './App.scss';
 import { Route, Switch } from "react-router-dom";
 import { routes } from './pages/routes';
-import { Converter } from './pages/Converter/Converter';
+import 'antd/dist/antd.css';
 
 function App() {
   return (

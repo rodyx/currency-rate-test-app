@@ -2,26 +2,13 @@
   min-height: 100vh;
   background: #ebecf0;
   padding: 0 20px;
-  overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
-  position: absolute;
-  width: 20px;
+::-webkit-scrollbar {
+  display: none;
 }
 
-html::-webkit-scrollbar-thumb {
-  border-radius: 50px;
-  box-shadow: inset -5px -5px 5px #ccc,
-  inset 5px 5px 5px #f2f2f2;
-  background-color: #e6e6e6;
-}
 
-html::-webkit-scrollbar-track {
-  border-radius: 50px;
-  box-shadow: inset 5px 5px 10px #ccc,
-  inset -5px -5px 10px #fff;
-}
 
 
 

@@ -2,13 +2,13 @@ import styles from './styles.module.scss';
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { SelectComponent } from '../Select/Select';
-import { currencyWantToChange, send } from '../../features/currency';
+import { currencyUpdated, send } from '../../features/currency';
 
 export const Header = () => {
   const [selected, setSelected] = useState();
   
   useEffect(() => {
-    currencyWantToChange(selected)
+    currencyUpdated(selected)
     send(selected)
   }, [selected])
   

@@ -16,7 +16,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-
+  
   .rateItem {
     height: 50px;
     width: 300px;
@@ -25,11 +25,11 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
     color: #75777e;
-    box-shadow: -5px -5px 20px #fff,
-    5px 5px 20px #babecc;
+    box-shadow: -2px -2px 10px #fff,
+    2px 2px 10px #babecc;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     
@@ -37,16 +37,6 @@
       box-shadow: -2px -2px 5px #fff,
       2px 2px 5px #babecc;
     }
-    
   }
 }
 
-.select {
-  width: 110px;
-}
-
-.option {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
