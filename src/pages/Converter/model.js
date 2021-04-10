@@ -5,10 +5,10 @@ export const convertCurrencyFx = createEffect(convertCurrency)
 export const sendInputValue = createEvent()
 
 export const $convertResult = createStore(null)
-  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.result || "Error")
-  .on(convertCurrencyFx.fail, () => "Error")
-export const $convertRate = createStore(null)
   .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.info?.quote || responseObj.error.info)
+  .on(convertCurrencyFx.failData, (_, error) => error.toString() || "Error")
+export const $convertRate = createStore(null)
+  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.result || "Error")
   .on(convertCurrencyFx.fail, () => "Error")
 
 forward({
@@ -16,3 +16,5 @@ forward({
   to: convertCurrencyFx
 })
 
+
+  
