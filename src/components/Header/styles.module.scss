@@ -1,18 +1,17 @@
 .appHeader {
-  width: calc(100vw - 20px);
+  width: 100vw;
   height: 50px;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  z-index: 11;
+  gap: 10px;
   background: #ebecf0;
   border-bottom: 1px solid #babecc;
 
   .selectWrapper {
-    width: 250px;
+    width: 220px;
     display: flex;
     align-items: center;
     justify-content: space-around;

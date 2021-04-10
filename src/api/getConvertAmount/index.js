@@ -12,7 +12,7 @@ function stringToCcy(str) {
 export async function convertCurrency(str) {
   const resArr = stringToCcy(str)
   if (!resArr) {
-    throw new Error('You have provided an invalid request')
+    throw new Error("You have provided an invalid request. Example: '15 eur in usd'")
   } 
 
   const [from, to, amount] = resArr
