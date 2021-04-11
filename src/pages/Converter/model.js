@@ -1,19 +1,20 @@
-import { createEffect, createStore, createEvent, forward } from 'effector'
+import { createEffect, createStore, createEvent, guard } from 'effector'
 import { convertCurrency } from '../../api/getConvertAmount'
 
 export const convertCurrencyFx = createEffect(convertCurrency)
 export const sendInputValue = createEvent()
 
 export const $convertResult = createStore(null)
-  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.info?.quote || responseObj.error.info)
+  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.result || responseObj.error.info)
   .on(convertCurrencyFx.failData, (_, error) => error.toString() || "Error")
 export const $convertRate = createStore(null)
-  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.result || "Error")
+  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.info?.quote || "Error")
   .on(convertCurrencyFx.fail, () => "Error")
 
-forward({
-  from: sendInputValue,
-  to: convertCurrencyFx
+guard({
+  source: sendInputValue,
+  filter: value => Boolean(value),
+  target: convertCurrencyFx
 })
 
 

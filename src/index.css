@@ -4,13 +4,11 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 input {
-  font-family: 'Montserrat', sans-serif;
   border: none;
   outline: none;
 }
