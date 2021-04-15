@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/currency-rate-test-app/static/css/main.1a8b2587.chunk.css",
+    "main.js": "/currency-rate-test-app/static/js/main.f8366f81.chunk.js",
+    "main.js.map": "/currency-rate-test-app/static/js/main.f8366f81.chunk.js.map",
+    "runtime-main.js": "/currency-rate-test-app/static/js/runtime-main.70f16023.js",
+    "runtime-main.js.map": "/currency-rate-test-app/static/js/runtime-main.70f16023.js.map",
+    "static/css/2.a5497ee8.chunk.css": "/currency-rate-test-app/static/css/2.a5497ee8.chunk.css",
+    "static/js/2.edfdd93b.chunk.js": "/currency-rate-test-app/static/js/2.edfdd93b.chunk.js",
+    "static/js/2.edfdd93b.chunk.js.map": "/currency-rate-test-app/static/js/2.edfdd93b.chunk.js.map",
+    "index.html": "/currency-rate-test-app/index.html",
+    "static/css/2.a5497ee8.chunk.css.map": "/currency-rate-test-app/static/css/2.a5497ee8.chunk.css.map",
+    "static/css/main.1a8b2587.chunk.css.map": "/currency-rate-test-app/static/css/main.1a8b2587.chunk.css.map",
+    "static/js/2.edfdd93b.chunk.js.LICENSE.txt": "/currency-rate-test-app/static/js/2.edfdd93b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.70f16023.js",
+    "static/css/2.a5497ee8.chunk.css",
+    "static/js/2.edfdd93b.chunk.js",
+    "static/css/main.1a8b2587.chunk.css",
+    "static/js/main.f8366f81.chunk.js"
+  ]
+}
