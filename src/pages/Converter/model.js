@@ -5,7 +5,7 @@ export const convertCurrencyFx = createEffect(convertCurrency)
 export const sendInputValue = createEvent()
 
 export const $convertResult = createStore(null)
-  .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.result || responseObj.error.info)
+  .on(convertCurrencyFx.doneData, (_, responseObj) => `${responseObj.result} ${responseObj.query.to}` || responseObj.error.info)
   .on(convertCurrencyFx.failData, (_, error) => error.toString() || "Error")
 export const $convertRate = createStore(null)
   .on(convertCurrencyFx.doneData, (_, responseObj) => responseObj.info?.quote || "Error")
@@ -16,6 +16,8 @@ guard({
   filter: value => Boolean(value),
   target: convertCurrencyFx
 })
+
+
 
 
   
